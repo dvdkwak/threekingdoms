@@ -1,0 +1,208 @@
+.UI_container{
+  background: rgb(200, 50, 50);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  height: 300px;
+  width: 796px;
+  border: 2px solid rgb(50, 50, 50);
+  margin-left: -400px;
+  overflow: hidden;
+}
+
+.UI_game_fase{
+  background: rgb(50, 50, 50);
+  position: absolute;
+  top: 0;
+  left: -20px;
+  transform: skewX(-45deg);
+  border-right: 10px solid gold;
+}
+
+.UI_game_fase p{
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  margin: 0;
+  padding: 5px 20px 5px 40px;
+  transform: skewX(45deg);
+}
+
+
+
+
+/* MOVE FASE */
+
+.UI_move_fase{
+  visibility: hidden;
+  position: absolute;
+  background: rgba(50, 50, 50, 0.5);
+  height: 200px;
+  width: 600px;
+  top: 60px;
+  left: 100px;
+  border-radius: 10px;
+}
+
+.UI_move_fase.active{
+  visibility: visible;
+}
+
+.UI_move_fase p{
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.UI_move_fase #UI_move_fase_charName{
+  font-size: 36px;
+}
+
+
+/* SELECT FASE */
+
+.UI_select_fase{
+  visibility: hidden;
+}
+
+.UI_select_fase.active{
+  visibility: visible;
+}
+
+.UI_select_fase .option.hidden{
+  visibility: hidden;
+}
+
+.UI_select_fase #option_1{
+  position: absolute;
+  background: white;
+  box-shadow: inset 10px 0px 20px 0px rgba(0,0,0,0.8);
+  border-right: 40px solid rgb(50, 50, 50);
+  height: 80px;
+  width: 410px;
+  transform: skewX(-45deg);
+  top: 60px;
+  left: -100px;
+  transition-duration: 300ms;
+}
+
+.UI_select_fase #option_1 p{
+  transform: skewX(45deg);
+}
+
+.UI_select_fase #option_1:hover{
+  left: -50px;
+  cursor: pointer;
+}
+
+.UI_select_fase #option_2{
+  position: absolute;
+  background: white;
+  box-shadow: inset 10px 0px 20px 0px rgba(0,0,0,0.8);
+  border-right: 40px solid rgb(50, 50, 50);
+  height: 80px;
+  width: 410px;
+  transform: skewX(-45deg);
+  bottom: 60px;
+  left: -100px;
+  transition-duration: 300ms;
+}
+
+.UI_select_fase #option_2 p{
+  transform: skewX(45deg);
+}
+
+.UI_select_fase #option_2:hover{
+  left: -50px;
+  cursor: pointer;
+}
+
+.UI_select_fase #option_3{
+  position: absolute;
+  background: white;
+  box-shadow: inset -10px 0px 20px 0px rgba(0,0,0,0.8);
+  border-left: 40px solid rgb(50, 50, 50);
+  height: 80px;
+  width: 410px;
+  transform: skewX(-45deg);
+  top: 60px;
+  right: -100px;
+  transition-duration: 300ms;
+}
+
+.UI_select_fase #option_3 p{
+  transform: skewX(45deg);
+}
+
+.UI_select_fase #option_3:hover{
+  right: -50px;
+  cursor: pointer;
+}
+
+.UI_select_fase #option_4{
+  position: absolute;
+  background: white;
+  box-shadow: inset -10px 0px 20px 0px rgba(0,0,0,0.8);
+  border-left: 40px solid rgb(50, 50, 50);
+  height: 80px;
+  width: 410px;
+  transform: skewX(-45deg);
+  bottom: 60px;
+  right: -100px;
+  transition-duration: 300ms;
+}
+
+.UI_select_fase #option_4 p{
+  transform: skewX(45deg);
+}
+
+.UI_select_fase #option_4:hover{
+  right: -50px;
+  cursor: pointer;
+}
+
+
+.UI_select_fase .selected{
+  position: absolute;
+  background: rgb(50, 50, 50);
+  color: white;
+  top: 0;
+  right: -20px;
+  transform: skewX(45deg);
+  border-left: 10px solid gold;
+  transition-duration: 300ms;
+}
+
+.UI_select_fase .selected.hidden{
+  display: none;
+}
+
+.UI_select_fase .selected p{
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  margin: 0;
+  padding: 5px 40px 5px 20px;
+  transform: skewX(-45deg);
+}
+
+.UI_select_fase .selected input#id{
+  display: none;
+}
+
+
+
+
+
+
+/* hidden div to put out javascript data */
+.hidden-data-div{
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+}
