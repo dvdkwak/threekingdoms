@@ -76,6 +76,12 @@
   visibility: hidden;
 }
 
+.UI_select_fase .option{
+font-size: 24px;
+font-weight: 600;
+font-family: 'ZCOOL KuaiLe', cursive;
+}
+
 .UI_select_fase #option_1{
   position: absolute;
   background: white;

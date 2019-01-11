@@ -32,16 +32,20 @@
 
           <!-- 4(?) possible options 1 foreach(creature) -->
           <div id="option_1" class="option hidden">
-            <p></p>
+            <p id="hiddenId" style="display: none;"></p>
+            <p id="username"></p>
           </div>
           <div id="option_2" class="option hidden">
-            <p></p>
+            <p id="hiddenId" style="display: none;"></p>
+            <p id="username"></p>
           </div>
           <div id="option_3" class="option hidden">
-            <p></p>
+            <p id="hiddenId" style="display: none;"></p>
+            <p id="username"></p>
           </div>
           <div id="option_4" class="option hidden">
-            <p></p>
+            <p id="hiddenId" style="display: none;"></p>
+            <p id="username"></p>
           </div>
         </div>
         <!-- End of Select Fase -->
@@ -93,41 +97,35 @@
         for(i = 1; i <= amount; i++){
           let text = data[i-1];
           text = text.split(":");
-          $("#option_"+i+" > p").text(text[1]);
+          $("#option_"+i+" > p#username").text(text[1]);
+          $("#option_"+i+" > p#hiddenId").text(text[0]);
           $("#option_"+i).removeClass("hidden");
         }
       }, 300);
-      function selectCreature(creature, id){
-        $(".UI_select_fase > .selected > p#username").text(creature);
+      function selectCreature(name, id){
+        console.log(name);
+        $(".UI_select_fase > .selected > p#username").text(name);
         $(".UI_select_fase > .selected > #id:text").val(id);
         $(".UI_select_fase > .selected").removeClass("hidden");
       }
       $("#option_1").click(function(){
-        let data = $("#option_1").text();
-        data = data.split(":");
-        let id = data[0];
-        let name = data[1];
+        let id = $("#option_1 > p#hiddenId").text();
+        let name = $("#option_1 > p#username").text();
         selectCreature(name, id);
       });
       $("#option_2").click(function(){
-        let data = $("#option_2").text();
-        data = data.split(":");
-        let id = data[0];
-        let name = data[1];
+        let id = $("#option_2 > p#hiddenId").text();
+        let name = $("#option_2 > p#username").text();
         selectCreature(name, id);
       });
       $("#option_3").click(function(){
-        let data = $("#option_3").text();
-        data = data.split(":");
-        let id = data[0];
-        let name = data[1];
+        let id = $("#option_3 > p#hiddenId").text();
+        let name = $("#option_3 > p#username").text();
         selectCreature(name, id);
       });
       $("#option_4").click(function(){
-        let data = $("#option_4").text();
-        data = data.split(":");
-        let id = data[0];
-        let name = data[1];
+        let id = $("#option_4 > p#hiddenId").text();
+        let name = $("#option_4 > p#username").text();
         selectCreature(name, id);
       });
     </script>

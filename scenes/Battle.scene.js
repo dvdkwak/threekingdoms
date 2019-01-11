@@ -26,7 +26,7 @@ var Battle = new Phaser.Class({
 
     // Player character
     this.minions[0] = new Creature(this, 120, 100, "hat-guy");
-    this.minions[0].setSize(16, 11);
+    this.minions[0].setSize(16, 24);
     this.minions[0].setDisplaySize(16*3, 22*3);
     this.minions[0].setAlliance("player");
     this.minions[0].setId(1);
@@ -35,7 +35,7 @@ var Battle = new Phaser.Class({
 
     // creating a minion for the player
     this.minions[1] = new Creature(this, 100, 200, "sensei");
-    this.minions[1].setSize(16, 11);
+    this.minions[1].setSize(16, 24);
     this.minions[1].setDisplaySize(16*3, 22*3);
     this.minions[1].setAlliance("player");
     this.minions[1].setId(2);
@@ -44,7 +44,10 @@ var Battle = new Phaser.Class({
 
 
     // writing the Id's of all creatures to a hidden div to talk with the UI
-    document.getElementById("hidden-data-text").innerText = this.minions[0].id + ":" + this.minions[0].name + "," + this.minions[1].id + ":" + this.minions[1].name;
+    document.getElementById("hidden-data-text").innerText = this.minions[0].id + ":" +
+                                                            this.minions[0].name + "," +
+                                                            this.minions[1].id + ":" +
+                                                            this.minions[1].name;
   },
 
   update: function()
@@ -57,7 +60,7 @@ var Battle = new Phaser.Class({
         e.setTurn(false);
       });
       this.minions[0].setTurn(true);
-      console.log("Player should be active now");
+      console.log("Hat-Guy should be active now");
     }else if(this.selectedCreatureId == this.minions[1].id){
       this.minions.forEach(function(e){
         e.setTurn(false);
